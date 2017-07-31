@@ -1,28 +1,21 @@
-
+@import url('https://fonts.googleapis.com/css?family=Lato:100|Quicksand|Work+Sans:100,500');
 /* ==========================================================================
    Base styles:
    ========================================================================== */
 /* Fix to include padding and border in the total width for each element */
-
-@import url('https://fonts.googleapis.com/css?family=Lato:100|Quicksand|Work+Sans:100,500');
-
 * {
   box-sizing: border-box;
 }
-
-/* Fix for responsive images */
-img {
-  max-width: 100%;
-}
-
 body {
   font-family: 'Quicksand', sans-serif;
   text-align: left;
   font-size: 18px;
-  color: #1b2834;
-
+  background-color: #fdfdfc;
 }
-
+/* Fix for responsive images */
+img {
+  max-width: 100%;
+}
 /* ==========================================================================
    Typography:
    ========================================================================== */
@@ -60,28 +53,53 @@ h3 {
 
 a{
   text-decoration: none;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  color: #1c496d;
+  transition: all .2s ease-in-out;
 }
-
 a:hover{
-  color: #5c1f1b;
+  color: #95c4f3;
 }
 
 /* ==========================================================================
-   Layout:
-   ========================================================================== */
+Layout:
+========================================================================== */
+section {
+  padding: 105px 30px;
+}
+
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+	margin: 0 auto;
+}
 .slide {
   display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  max-width: 1200px;
+  max-height: 800px;
+  background-color: white;
+  margin: 120px auto;
+  box-shadow: 0 30px 40px -15px rgba(0,0,0,0.35);
 }
 .description {
-  width: 40%;
+  width: 50%;
   background-color: white;
+  padding: 30px;
+  text-align: justify;
 }
 .imgcard {
-  width: 40%;
+  width: 50%;
+  height: 600px;
+  object-fit: cover;
 }
 /* ==========================================================================
 Header:
@@ -99,28 +117,63 @@ header{
 }
 
 nav{
-  nav {
-  	position: fixed;
-  	top: 0;
-  	left: 0;
-  	right: 0;
-  	background-color: white;
-  	z-index: 100;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 100;
+  text-align: center;
+  text-transform: uppercase;
 }
-
+ul {
+  list-style: none;
+  padding: 0;
+}
+/*ul a {
+  text-transform: none;
+}*/
 nav li {
-	display: inline-block;
-	padding: 3px 60px;
-  color: #1b2834;
-  text-align: center;
+  display: inline-block;
+  padding: 0 72px;
 }
-
-nav a {
-	display: inline-block;  
-	text-transform: uppercase;
-  text-align: center;
+/* Styles that will need to be overriden in media query */
+.hamburger {
+	display: none;
+	font-size: 20px;
+	margin: 10px 0;
+	padding-left: 20px;
+}
+h1 a,
+h1 a:hover,
+header h2 {
+	color: #fff;
 }
 /* ==========================================================================
  Buttons:
  ========================================================================== */
+
+ /* ----------------------------------------
+ Place your media queries here!
+ ------------------------------------------- */
+
+ @media screen and (max-width: 760px) {
+   .slide {
+    flex-basis: 98%;
+ 		margin-bottom: 40px;
+   }
+   .hamburger{
+     display: block;
+     text-align: left;
+   }
+   nav ul {
+     display: none;
+   }
+ 	.image-wrapper {
+ 		flex-basis: 98%;
+ 	}
+ 	footer input {
+ 		margin-right: 0px;
+ 	}
+
+ }
