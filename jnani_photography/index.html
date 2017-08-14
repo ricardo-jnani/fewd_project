@@ -10,6 +10,8 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
   <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  -->
 
   <link rel="stylesheet" href="css/normalize.css">
@@ -31,6 +33,7 @@
       <li><a href="#iceland">Iceland</a></li>
       <li><a href="#maui">Maui</a></li>
       <li><a href="#spaces">Spaces</a></li>
+
     </ul>
   </nav>
 
@@ -39,8 +42,16 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut itaque facere quibusdam rerum, maiores consequuntur, aliquam esse blanditiis eum a libero fuga consectetur non neque amet rem impedit quos, fugit. Culpa ratione iure facilis est ea, ducimus neque voluptas fugiat velit unde ipsam suscipit laudantium cupiditate, officiis eaque id? Eaque ad, nisi assumenda facere qui accusantium alias, fugit adipisci natus.</p>
     <p>Dignissimos quasi nisi maiores dolor sunt. Fuga unde, rem quo sint dolore est pariatur cupiditate nostrum et suscipit, aperiam aliquam officia libero vel error modi ratione, dolorem consectetur doloribus mollitia! Temporibus aliquid laboriosam expedita quia, id consectetur culpa? Enim iusto ab facere aliquid cumque aut amet tenetur dolores, iure tempora perspiciatis incidunt eveniet nostrum, ea esse doloribus labore unde nobis?</p>
   </section>
-
+  <div class="arrows">
+    <i id="up" class="fa fa-long-arrow-up" aria-hidden="true"></i>
+    <i id="down" class="fa fa-long-arrow-down" aria-hidden="true"></i>
+  </div>
+  <div class="view-style">
+    <i id="view-index" class="fa fa-th-large" aria-hidden="true"></i>
+    <i id="view-list" class="fa fa-th-list" aria-hidden="true"></i>
+  </div>
   <section id="iceland">
+    <h4>Iceland</h4>
     <div class="slide"> <!-- slide = flex container -->
       <img class="imgcard" src="images/iceland_1.jpg" alt="iceland_1"> <!--flex item 1 -->
       <div class="description"> <!-- flex item 2 -->
@@ -49,14 +60,14 @@
       </div>
     </div>
     <div class="slide">
-      <img class="imgcard" src="images/iceland_1.jpg" alt="iceland_1">
+      <img class="imgcard" src="images/iceland_2.jpg" alt="iceland_1">
       <div class="description">
         <h2>Skogafoss</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quasi nisi maiores dolor sunt.</p>
       </div>
     </div>
     <div class="slide">
-      <img class="imgcard" src="images/iceland_1.jpg" alt="iceland_1">
+      <img class="imgcard" src="images/iceland_3.jpeg" alt="iceland_1">
       <div class="description">
         <h2>Vatnajokull</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quasi nisi maiores dolor sunt.</p>
@@ -65,6 +76,7 @@
   </section>
 
   <section id="maui">
+    <h4>Maui</h4>
     <div class="slide">
       <img class="imgcard" src="images/hawaii_1.jpg" alt="hawaii_1">
       <div class="description">
@@ -73,14 +85,14 @@
       </div>
     </div>
     <div class="slide">
-      <img class="imgcard" src="images/hawaii_1.jpg" alt="iceland_1">
+      <img class="imgcard" src="images/hawaii_4.jpg" alt="iceland_1">
       <div class="description">
         <h2>Honolua</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quasi nisi maiores dolor sunt.</p>
       </div>
     </div>
     <div class="slide">
-      <img class="imgcard" src="images/hawaii_1.jpg" alt="iceland_1">
+      <img class="imgcard" src="images/hawaii_3.jpg" alt="iceland_1">
       <div class="description">
         <h2>Honokahao</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quasi nisi maiores dolor sunt.</p>
@@ -88,7 +100,11 @@
     </div>
   </section>
 
-
+  <footer>
+    <div>
+      <p class="copyright">&copy;2017 Ricardo Jnani Gonzalez</p>
+    </div>
+  </footer>
   <script src="js/vendor/jquery-1.12.0.min.js"></script>
   <script src="js/main.js"></script>
 </body>
