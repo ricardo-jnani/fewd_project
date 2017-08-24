@@ -2,6 +2,11 @@
 // INTERACTION IDEAS
 /////////////////////////
 
+$('#view-icon, .sq-one').on('click', function() {
+  console.log('CLICKED!');
+  $('.sq-one').fadeToggle(500);
+  $('.sq-two').toggleClass('shadow')
+});
 
 // SCROLL TO STCIKY NAV BAR
   //When the user scrolls down past ~ 500px
@@ -14,9 +19,9 @@ $(window).on('scroll', function (){
   console.log('The distance scrolled in:' + distanceScrolled);
 
   if (distanceScrolled > 1500){
-    $('#up, #down, #view-index').fadeIn(1000);
+    $('#up, #down, .view').fadeIn(1000);
   } else {
-    $('#up, #down, #view-index').fadeOut(1000);
+    $('#up, #down, .view').fadeOut(1000);
   }
 });
   //When the user scrolls down past ~ 1000px (look at Sarah's solution file >> scroll by pixels)
@@ -25,15 +30,7 @@ $(window).on('scroll', function (){
       //Show Index View Icon
       //Else show Slide View Icon
 
-// ARROW NEXT & PREVIOUS SCROLL FOR THE SLIDES
-  //When the user clicks Down Arrow
-    //If currentImageNumber is < numberImages
-      //Increase currentImageNumber by 1
-    //Else make currentImageNumber = 0
-  //When the user clicks Up Arrow
-    //If currentImageNumber is > numberImages
-      //Decrease currentImageNumber by 1
-    //Else make currentImageNumber = numberImages
+
 
 // INDEX VIEW ICON
 $('#view-index').on('click', function (e) {
@@ -67,3 +64,36 @@ $('view-slide').on('click', function (e){
 
 //FILTER CONTENT
   //similar to how we filtered the author paragraph in the madlibs lab
+
+
+// ARROW NEXT & PREVIOUS SCROLL FOR THE SLIDES
+  //When the user clicks Down Arrow
+    //If currentImageNumber is < numberImages
+      //Increase currentImageNumber by 1
+    //Else make currentImageNumber = 0
+  //When the user clicks Up Arrow
+    //If currentImageNumber is > numberImages
+      //Decrease currentImageNumber by 1
+    //Else make currentImageNumber = numberImages
+
+  var translateY = 0;
+
+  $('#down').on('click', function () {
+  	if (translateY === -75) {
+  		translateY = 0;
+  	} else {
+  		translateY -= 25;
+  	}
+
+  	$('.full-slides').css('transform', 'translateY(' + translateY + '%)');
+  });
+
+  $('#up').on('click', function () {
+  	if (translateY === 0) {
+  		translateY = -75;
+  	} else {
+  		translateY += 25;
+  	}
+
+  	$('.full-slides').css('transform', 'translateY(' + translateY + '%)');
+  });
